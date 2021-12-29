@@ -1,0 +1,76 @@
+@import "~foundation-sites/scss/foundation";
+@import "~material-colors/dist/colors";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.todos {
+
+    .el-card__body {
+        --el-card-padding: 0px;
+    }
+    .card-header {
+        .el-button {}
+    }
+
+    &__app {}
+    &__list {
+        list-style : none;
+        margin     : 0;
+        padding    : 0;
+    }
+    &__list-item {
+        display        : flex;
+        flex-direction : row;
+        padding: 0;
+        border-bottom: 1px solid $md-blue-grey-100;
+
+    }
+    &__list-item-checkbox {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        border-right: var(--el-border-base);
+        padding: 5px;
+        .el-checkbox {
+            $size                      : 30px;
+            --el-checkbox-font-size    : #{$size};
+            --el-checkbox-input-height : #{$size};
+            --el-checkbox-input-width  : #{$size};
+            font-size                  : var(--el-checkbox-font-size);
+
+            &__inner::after {
+                border-width : 3px;
+                height       : 7px *2.3;
+                left         : 4px * 2.3;
+                top          : 2px;
+                width        : 3px * 2.3;
+            }
+        }
+    }
+    &__list-item-title {
+        flex-grow: 1;
+        padding    : 5px;
+        &--editing {
+            padding    : 0px;
+        }
+         .el-textarea {
+            &__inner {
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+        > p {
+            margin     : 0;
+            text-align : left;
+            font-size  : 12px;
+        }
+    }
+    &__pagination {
+        border-top: var(--el-border-base);
+    }
+    &__form {}
+}

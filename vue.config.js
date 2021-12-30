@@ -8,7 +8,7 @@ const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 module.exports = {
     devServer: {
         host: '127.0.0.1',
-        port:3000
+        port: 3000
     },
     configureWebpack: {
         devtool: 'inline-source-map',
@@ -16,15 +16,15 @@ module.exports = {
             AutoImport({
                 resolvers: [ElementPlusResolver({
                     importStyle: 'sass',
-                    ssr:false,
-                    version:'1.2.0-beta.6'
+                    ssr: false,
+                    version: '1.2.0-beta.6'
                 })]
             }),
             Components({
                 resolvers: [ElementPlusResolver({
                     importStyle: 'sass',
-                    ssr:false,
-                    version:'1.2.0-beta.6'
+                    ssr: false,
+                    version: '1.2.0-beta.6'
                 })]
             })
         ],

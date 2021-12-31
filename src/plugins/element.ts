@@ -1,4 +1,4 @@
-import { ElButton, ElCard, ElCheckbox, ElCheckboxButton, ElCol, ElForm, ElFormItem, ElInput, ElRow, ElScrollbar, ElSpace } from 'element-plus';
+import { ElButton, ElCard,ElLoading, ElLoadingDirective,ElCheckbox, ElCheckboxButton, ElCol, ElForm, ElFormItem, ElInput, ElMessage, ElMessageBox, ElRow, ElScrollbar, ElSpace } from 'element-plus';
 
 export default (app) => {
     app.use(ElButton);
@@ -12,4 +12,9 @@ export default (app) => {
     app.use(ElForm);
     app.use(ElFormItem);
     app.use(ElInput);
+    app.use(ElMessageBox);
+    app.use(ElMessage);
+    app.use(ElLoading);
+    app.use(ElLoadingDirective);
+    app.directive(ElLoading.directive)
 }

@@ -1,4 +1,5 @@
 ///<reference path="global.d.ts"/>
+///<reference path="../auto-imports.d.ts"/>
 
 import './styles.scss';
 import { createApp } from 'vue';
@@ -8,11 +9,6 @@ import { Streams } from '@laravel-streams/api-client';
 import { streams } from '@/streams';
 import installElementPlus from './plugins/element';
 
-const app                            = createApp(App);
-app.config.globalProperties.$store   = store;
-app.config.globalProperties.$streams = streams;
-installElementPlus(app);
-app.mount('#app');
 
 declare module '@vue/runtime-core' {
     export interface ComponentCustomProperties {
@@ -20,3 +16,12 @@ declare module '@vue/runtime-core' {
         $streams: Streams;
     }
 }
+
+const app                            = createApp(App);
+window['app'] = app;
+window['streams'] = streams;
+window['store'] = store;
+app.config.globalProperties.$store   = store;
+app.config.globalProperties.$streams = streams;
+installElementPlus(app);
+app.mount('#app');

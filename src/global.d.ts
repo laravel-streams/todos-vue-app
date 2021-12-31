@@ -1,7 +1,7 @@
 
 interface Todo {
     id:string
-    completed:boolean
+    complete:boolean
     editing:boolean
     title:string
 }

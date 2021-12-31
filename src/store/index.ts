@@ -32,6 +32,13 @@ export class Store {
         this.total                              = entries.meta.total;
         this.current_page                       = entries.meta.current_page;
     }
+
+    async addTodo(title:string){
+        const stream  = await getStream('todos');
+        const entry = await stream.getRepository().create({title});
+        await this.paginate(this.current_page)
+        return entry;
+    }
 }
 
 

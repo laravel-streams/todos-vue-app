@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref } from 'vue';
+import {  PropType } from 'vue';
 import TodoListItem from '@/components/TodoListItem.vue';
 
 export default defineComponent({

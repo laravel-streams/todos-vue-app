@@ -2,7 +2,7 @@
     <li class="todos__list-item">
         <div class="todos__list-item-checkbox">
             <ElCheckbox
-                v-model="todo.completed"
+                v-model="todo.complete"
                 :name="todo.id"
                 @change="onCheckboxChange"
                 size="mini"
@@ -17,14 +17,14 @@
                       v-show="todo.editing"
                       v-model="todo.title"
                       size="mini"
-                      @blur="todo.editing=false"
+                      @blur="onInputBlur"
             />
         </div>
     </li>
 </template>
 
 <script lang="ts">
-import { ComponentPublicInstance, computed, defineComponent, PropType, ref } from 'vue';
+import { ComponentPublicInstance, PropType } from 'vue';
 import { TodoEntry } from '@/types';
 
 
@@ -45,7 +45,8 @@ export default defineComponent({
         }));
         const onCheckboxChange  = (v) => {
             console.log(v);
-            todo.completed = v;
+            //@ts-ignore
+            todo.entry.complete = v;
             todo.editing   = false;
             todo.save();
         };
@@ -55,6 +56,8 @@ export default defineComponent({
         };
         const onInputBlur       = (e) => {
             todo.editing = false;
+            //@ts-ignore
+            todo.entry.title = todo.title
             todo.save();
         };
         const input             = ref<ComponentPublicInstance>();
@@ -70,7 +73,3 @@ export default defineComponent({
 });
 
 </script>
-
-<style lang="scss">
-//@import "../../styles/base";
-</style>

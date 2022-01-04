@@ -1,5 +1,7 @@
 import { ElButton, ElCard,ElLoading, ElLoadingDirective,ElCheckbox, ElCheckboxButton, ElCol, ElForm, ElFormItem, ElInput, ElMessage, ElMessageBox, ElRow, ElScrollbar, ElSpace } from 'element-plus';
-
+import 'element-plus/es/components/message-box/style/index.mjs'
+import 'element-plus/es/components/loading/style/index.mjs'
+import 'element-plus/theme-chalk/src/loading.scss';
 export default (app) => {
     app.use(ElButton);
     app.use(ElCheckboxButton);
@@ -15,6 +17,5 @@ export default (app) => {
     app.use(ElMessageBox);
     app.use(ElMessage);
     app.use(ElLoading);
-    app.use(ElLoadingDirective);
     app.directive(ElLoading.directive)
 }

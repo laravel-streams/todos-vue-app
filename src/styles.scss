@@ -1,4 +1,3 @@
-@import "~foundation-sites/scss/foundation";
 @import "~material-colors/dist/colors";
 
 body {
@@ -9,6 +8,10 @@ body {
 
     .el-card__body {
         --el-card-padding: 0px;
+    }
+    .el-scrollbar {
+
+        height: 300px;
     }
     .card-header {
         .el-button {}

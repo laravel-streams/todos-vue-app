@@ -44,8 +44,9 @@ export default defineComponent({
     setup(props, ctx) {
         const $       = getCurrentInstance();
         const loading = ref(true);
-        onBeforeMount(() => {
-            $.proxy.$store.paginate(1);
+        onBeforeMount(async() => {
+            await $.proxy.$store.paginate(1);
+            loading.value = false;
         });
         const ul                  = ref<HTMLUListElement>();
         let classes               = computed((c) => ({
@@ -67,12 +68,12 @@ export default defineComponent({
             return $.proxy.$store.todos;
         });
         const handleAddClick      = async (e) => {
-            const title   = await ElMessageBox.prompt('Please input your task', 'Add todo task', {
+            const data   = await ElMessageBox.prompt('Please input your task', 'Add todo task', {
                 confirmButtonText: 'OK',
                 cancelButtonText : 'Cancel',
             });
             loading.value = true;
-            await $.proxy.$store.addTodo(title);
+            await $.proxy.$store.addTodo(data.value);
             loading.value = false;
         };
         return {

@@ -1,19 +1,20 @@
-# todos-vue-frontend
+## Introduction
 
-## Project setup
-```
-yarn install
-```
+This simple todos application is written in Vue using <!--Tailwind and -->the [Streams API Client](https://streams.dev/docs/api/client).
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### API Server
 
-### Compiles and minifies for production
-```
-yarn build
-```
+You will need to install the accompanying API server to run this application.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [Todos Backend](https://github.com/laravel-streams/todos-backend)
+
+## Getting Started
+
+- Clone this repository locally.
+- Run `npm install` within the project.
+- Run `cp .env.example .env` and adjust as needed.
+- Use `npm run serve` to start your local server.
+
+## The Basics
+
+For reference, the API Client is configured within `src/streams.ts` and used within `src/store/index.ts`.

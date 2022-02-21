@@ -992,16 +992,10 @@
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
 
-"@laravel-streams/api-client@^1.2.0":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@laravel-streams/api-client/-/api-client-1.2.3.tgz#d72a1f27ff7d41399436a23b25a06b65cc51fc89"
-  integrity sha512-jfKAiJuWVl6aptphgVNd3z2pjzRc17RkQiiIIIu6B+dWAiLmD+IIdF5j9Ks/itNd0pBOwtGd3VaqR0j+oyvvgA==
-  dependencies:
-    camelcase "^6.2.0"
-    collect.js "^4.29.3"
-    deepmerge "^4.2.2"
-    lz-string "^1.4.4"
-    tapable "^2.2.1"
+"@laravel-streams/api-client@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@laravel-streams/api-client/-/api-client-2.0.0.tgz#27f67514293cb354e384fe64f8aef5d33c350265"
+  integrity sha512-geffiuHQcfnzCegEZLZ8F701QIHAzOSpUrSNJ0SJ8nVzTa88bZ/E3W/0ZmmFx8Cg3t/AT0CDmfAnAkhJXtLq3w==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -2241,6 +2235,13 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
+
 babel-code-frame@^6.22.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-code-frame/-/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
@@ -2680,10 +2681,15 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
-camelcase@^6.0.0, camelcase@^6.2.0:
+camelcase@^6.0.0:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.2.1.tgz#250fd350cfd555d0d2160b1d51510eaf8326e86e"
   integrity sha512-tVI4q5jjFV5CavAU8DXfza/TJcZutVKo/5Foskmsqcm0MsL91moHvwiGNnqaa2o6PF/7yT5ikDRcVcl8Rj6LCA==
+
+camelcase@^6.2.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.3.0.tgz#5685b95eb209ac9c0c177467778c9c84df58ba9a"
+  integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-api@^3.0.0:
   version "3.0.0"
@@ -2913,10 +2919,15 @@ coa@^2.0.2:
     chalk "^2.4.1"
     q "^1.1.2"
 
-collect.js@^4.29.0, collect.js@^4.29.3:
+collect.js@^4.29.0:
   version "4.29.3"
   resolved "https://registry.yarnpkg.com/collect.js/-/collect.js-4.29.3.tgz#4d8aeb2970d0d12f6bc0923c9a2a172d51ec25f8"
   integrity sha512-/6idZ7r3B25Q4cForbiHJ7+aqupcgMEtrKRn9D3viCbLw+YuNFjd23HwDH89Y2cU4jlhkwksD80nZFKtNE25Gw==
+
+collect.js@^4.29.3:
+  version "4.31.3"
+  resolved "https://registry.yarnpkg.com/collect.js/-/collect.js-4.31.3.tgz#a13aec0b59051de93196e56e2da9ce36a8ee9a42"
+  integrity sha512-pHXhGzo5qftTTlEj88MCRXN8YuhARhmEnCOmc7wzBlI+5fVVC5VZ9Z/Z5KEDuM90Fgwv025Fc2Gk4VpFKMrzQA==
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -4322,6 +4333,11 @@ follow-redirects@^1.0.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.6.tgz#8cfb281bbc035b3c067d6cd975b0f6ade6e855cd"
   integrity sha512-fhUl5EwSJbbl8AR+uYL2KQDxLkdSjZGR36xy46AO7cOMTrCMON6Sa28FmAnC2tRTDbd/Uuzz3aJBv7EBN7JH8A==
 
+follow-redirects@^1.14.4:
+  version "1.14.9"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
+  integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -4376,11 +4392,6 @@ forwarded@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.2.0.tgz#2269936428aad4c15c7ebe9779a84bf0b2a81811"
   integrity sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==
-
-foundation-sites@^6.7.4:
-  version "6.7.4"
-  resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.7.4.tgz#495ddb3b7014ae33df3bf7cc1f9fe74b2cfd572e"
-  integrity sha512-2QPaZJ0Od0DyklhQyKC3zPbr8AAUXSkr1scZJrQTgj/KTLresuCgUBfi7ft32NlOWhuqVXisjOgTE8N5EPS3cg==
 
 fragment-cache@^0.2.1:
   version "0.2.1"
